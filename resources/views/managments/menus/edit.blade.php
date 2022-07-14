@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Modifier le menu {{ $menu->title }}
+                                    <i class="fas fa-plus"></i> Edit Menu : {{ $menu->title }}
                                 </h3>
                                 <form action="{{ route("menus.update",$menu->slug) }}" method="post" enctype="multipart/form-data">
                                     @csrf
@@ -22,17 +22,17 @@
                                         <input
                                             type="text" name="title" id="title"
                                             class="form-control"
-                                            placeholder="Titre"
+                                            placeholder="Nama"
                                             value="{{ $menu->title }}"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <textarea
                                             name="description" id="description"
-                                            rows="5"
-                                            cols="30"
+                                            rows="8"
+                                            cols="60"
                                             class="form-control"
-                                            placeholder="Description"
+                                            placeholder="Deskripsi"
                                         >{{ $menu->description }}</textarea>
                                     </div>
                                     <div class="input-group mb-3">
@@ -44,12 +44,12 @@
                                         <input type="number"
                                             name="price"
                                             class="form-control"
-                                            placeholder="Prix"
+                                            placeholder="Harga"
                                             value="{{ $menu->price }}"
                                         >
                                         <div class="input-group-append">
                                             <div class="input-group-text">
-                                                .00
+                                                .0
                                             </div>
                                         </div>
                                     </div>
@@ -72,13 +72,13 @@
                                                 class="custom-file-input"
                                             >
                                             <label class="custom-file-label">
-                                                2mg max
+                                                Maksimal 2MB
                                             </label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <select name="category_id" id="category_id" class="form-control">
-                                            <option value="" selected disabled>Choisir une catégorie</option>
+                                            <option value="" selected disabled>Pilih Kategori</option>
                                             @foreach ($categories as $category)
                                                 <option
                                                     {{ $category->id === $menu->category->id ? "selected" : ""}}
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

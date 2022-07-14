@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Ajouter un menu
+                                    <i class="fas fa-plus"></i> Tambah Menu
                                 </h3>
                                 <form action="{{ route("menus.store") }}" method="post" enctype="multipart/form-data">
                                     @csrf
@@ -21,7 +21,7 @@
                                         <input
                                             type="text" name="title" id="title"
                                             class="form-control"
-                                            placeholder="Titre"
+                                            placeholder="Nama"
                                         >
                                     </div>
                                     <div class="form-group">
@@ -30,7 +30,7 @@
                                             rows="5"
                                             cols="30"
                                             class="form-control"
-                                            placeholder="Description"
+                                            placeholder="Deskripsi"
                                         ></textarea>
                                     </div>
                                     <div class="input-group mb-3">
@@ -42,11 +42,11 @@
                                         <input type="number"
                                             name="price"
                                             class="form-control"
-                                            placeholder="Prix"
+                                            placeholder="harga"
                                         >
                                         <div class="input-group-append">
                                             <div class="input-group-text">
-                                                .00
+                                                .0
                                             </div>
                                         </div>
                                     </div>
@@ -62,13 +62,13 @@
                                                 class="custom-file-input"
                                             >
                                             <label class="custom-file-label">
-                                                2mg max
+                                                2MB max
                                             </label>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <select name="category_id" id="category_id" class="form-control">
-                                            <option value="" selected disabled>Choisir une catégorie</option>
+                                            <option value="" selected disabled>Pilih Kategori</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">
                                                     {{ $category->title }}
@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

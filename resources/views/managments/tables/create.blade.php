@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Ajouter une table
+                                    <i class="fas fa-plus"></i> Tambahkan Meja
                                 </h3>
                                 <form action="{{ route("tables.store") }}" method="post">
                                     @csrf
@@ -21,21 +21,21 @@
                                         <input
                                             type="text" name="name" id="name"
                                             class="form-control"
-                                            placeholder="Nom"
+                                            placeholder="Nama Pemesan"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <select name="status" class="form-control">
                                             <option value="" selected disabled>
-                                                Disponible
+                                                Tersedia
                                             </option>
-                                            <option value="1">Oui</option>
-                                            <option value="0">Non</option>
+                                            <option value="1">ya</option>
+                                            <option value="0">Tidak</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

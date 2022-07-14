@@ -20,10 +20,17 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => "samadi samir",
-        'email' => "samadi@email.com",
+        'name' => "Resto Admin 1",
+        'email' => "admin.com",
         'email_verified_at' => now(),
-        'password' => Hash::make("samadi"), // password
+        'password' => Hash::make("admin"), // password
+        'remember_token' => Str::random(10),
+    ];
+    return [
+        'name' => "Resto Admin 2",
+        'email' => "admin2.com",
+        'email_verified_at' => now(),
+        'password' => Hash::make("admin"), // password
         'remember_token' => Str::random(10),
     ];
 });

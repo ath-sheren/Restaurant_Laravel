@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Modifier la table {{ $table->name }}
+                                    <i class="fas fa-plus"></i> Edit Meja : {{ $table->name }}
                                 </h3>
                                 <form action="{{ route("tables.update", $table->slug) }}" method="post">
                                     @csrf
@@ -22,22 +22,22 @@
                                         <input
                                             type="text" name="name" id="name"
                                             class="form-control"
-                                            placeholder="Nom"
+                                            placeholder="Nama"
                                             value="{{  $table->name }}"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <select name="status" class="form-control">
                                             <option value="" disabled>
-                                                Disponible
+                                                Tersedia
                                             </option>
-                                            <option {{ $table->status === 1 ? "selected" : "" }} value="1">Oui</option>
-                                            <option {{ $table->status === 0 ? "selected" : "" }} value="0">Non</option>
+                                            <option {{ $table->status === 1 ? "selected" : "" }} value="1">Ya</option>
+                                            <option {{ $table->status === 0 ? "selected" : "" }} value="0">Tidak</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

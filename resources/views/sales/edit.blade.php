@@ -72,7 +72,7 @@
                                             {{ $menu->title }}
                                         </h5>
                                         <h5 class="text-muted">
-                                            {{ $menu->price }} DH
+                                            {{ $menu->price }} 
                                         </h5>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <select name="servant_id" class="form-control">
                                     <option value="" selected disabled>
-                                        Sérveur
+                                        Pelayan
                                     </option>
                                     @foreach ($servants as $servant)
                                         <option
@@ -98,13 +98,13 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
-                                        Qté
+                                        Jumlah Menu
                                     </div>
                                 </div>
                                 <input type="number"
                                     name="quantity"
                                     class="form-control"
-                                    placeholder="Qté"
+                                    placeholder="Jumlah Menu"
                                     value="{{ $sale->quantity }}"
                                 >
                             </div>
@@ -117,12 +117,12 @@
                                 <input type="number"
                                     name="total_price"
                                     class="form-control"
-                                    placeholder="Prix"
+                                    placeholder="Uang Pembeli"
                                      value="{{ $sale->total_price }}"
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
@@ -135,12 +135,12 @@
                                 <input type="number"
                                     name="total_received"
                                     class="form-control"
-                                    placeholder="Total"
+                                    placeholder="Total Harga"
                                      value="{{ $sale->total_received }}"
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
@@ -153,42 +153,42 @@
                                 <input type="number"
                                     name="change"
                                     class="form-control"
-                                    placeholder="Reste"
+                                    placeholder="Sisa Kembalian"
                                      value="{{ $sale->change }}"
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <select name="payment_type" class="form-control">
                                     <option value="" selected disabled>
-                                        Type de paiement
+                                        Jenis Pembayaran
                                     </option>
                                     <option value="cash"
                                         {{ $sale->payment_type === "cash" ? "selected" : ""}}
                                         >
-                                        Espéce
+                                        Uang Tunai
                                     </option>
                                     <option value="card"
                                     {{ $sale->payment_type === "card" ? "selected" : ""}}
                                     >
-                                        Carte bancaire
+                                        kartu Debit
                                     </option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select name="payment_status" class="form-control">
                                     <option value="" selected disabled>
-                                        Etat de paiement
+                                        Status Pembayaran
                                     </option>
                                     <option value="paid" {{ $sale->payment_status === "paid" ? "selected" : ""}}>
-                                        Payé
+                                        Dibayar
                                     </option>
                                     <option value="unpaid" {{ $sale->payment_status === "unpaid" ? "selected" : ""}}>
-                                        Impayé
+                                        Belum Dibayar
                                     </option>
                                 </select>
                             </div>
@@ -199,7 +199,7 @@
                                     "
                                     class="btn btn-primary"
                                 >
-                                    Valider
+                                    Submit
                                 </button>
                             </div>
                         </div>

@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Ajouter une catégorie
+                                    <i class="fas fa-plus"></i> Tambah Kategori
                                 </h3>
                                 <form action="{{ route("categories.store") }}" method="post">
                                     @csrf
@@ -21,12 +21,12 @@
                                         <input
                                             type="text" name="title" id="title"
                                             class="form-control"
-                                            placeholder="Titre"
+                                            placeholder="Kategori"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

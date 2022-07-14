@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Modifier le sérveur {{ $servant->name }}
+                                    <i class="fas fa-plus"></i> Edit Pelayan : {{ $servant->name }}
                                 </h3>
                                 <form action="{{ route("servants.update",$servant->id) }}" method="post">
                                     @csrf
@@ -22,7 +22,7 @@
                                         <input
                                             type="text" name="name" id="name"
                                             class="form-control"
-                                            placeholder="Nom & Prénom"
+                                            placeholder="nama"
                                             value="{{ $servant->name }}"
                                         >
                                     </div>
@@ -30,13 +30,13 @@
                                         <input
                                             type="text" name="address" id="address"
                                             class="form-control"
-                                            placeholder="Addresse"
+                                            placeholder="Alamat"
                                             value="{{ $servant->address }}"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

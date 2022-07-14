@@ -70,7 +70,7 @@ class SalesController extends Controller
         $sale->tables()->sync($request->table_id);
         //redirect user
         return redirect()->back()->with([
-            "success" => "Paiement effectué avec succés"
+            "success" => "Pembayaran Berhasil Ditambah"
         ]);
     }
 
@@ -143,7 +143,7 @@ class SalesController extends Controller
         $sale->tables()->sync($request->table_id);
         //redirect user
         return redirect()->back()->with([
-            "success" => "Paiement modifié avec succés"
+            "success" => "Pembayaran Berhasil Diupdate"
         ]);
     }
 
@@ -161,7 +161,7 @@ class SalesController extends Controller
         $sale->delete();
         //redirect user
         return redirect()->back()->with([
-            "success" => "Paiement supprimé avec succés"
+            "success" => "Pembayaran Berhasil Dihapus"
         ]);
     }
 }

@@ -55,7 +55,7 @@ class ServantsController extends Controller
         ]);
         //redirect user
         return redirect()->route("servants.index")->with([
-            "success" => "serveur ajouté avec succés"
+            "success" => "Pelayan Berhasil Ditambahkan"
         ]);
     }
 
@@ -106,7 +106,7 @@ class ServantsController extends Controller
         ]);
         //redirect user
         return redirect()->route("servants.index")->with([
-            "success" => "serveur modifié avec succés"
+            "success" => "Pelayan Berhasil Diupdate"
         ]);
     }
 
@@ -122,7 +122,7 @@ class ServantsController extends Controller
         $servant->delete();
         //redirect user
         return redirect()->route("servants.index")->with([
-            "success" => "serveur supprimé avec succés"
+            "success" => "Pelayan Berhasil Didelete"
         ]);
     }
 }

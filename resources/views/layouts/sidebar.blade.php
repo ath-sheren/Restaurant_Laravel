@@ -3,22 +3,22 @@
         font-weight-bold list-group-item-action
         list-group-item-light">
         <i class="fas fa-th-list"></i>
-            Catégories
+            Categori
     </a>
     <a href="{{ route("menus.index") }}" class="list-group-item
         font-weight-bold list-group-item-action
         list-group-item-light">
         <i class="fas fa-clipboard-list"></i>
-            Menus</a>
+            Menu</a>
     <a href="{{ route("tables.index") }}" class="list-group-item
         font-weight-bold list-group-item-action
         list-group-item-light">
         <i class="fas fa-chair"></i>
-        Tables</a>
+        Meja</a>
     <a href="{{ route("servants.index") }}" class="list-group-item
         font-weight-bold list-group-item-action
         list-group-item-light">
         <i class="fas fa-user-cog"></i>
-        Sérveurs
+        Pelayan
     </a>
 </ul>

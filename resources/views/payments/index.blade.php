@@ -27,7 +27,7 @@
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
                                 <a href="{{ route("sales.index") }}" class="btn btn-outline-secondary float-right">
-                                    Toutes les ventes
+                                    Semua Penjualan
                                 </a>
                             </div>
                         </div>
@@ -71,46 +71,46 @@
                                                                         {{ $menu->title }}
                                                                     </h5>
                                                                     <span class="text-muted">
-                                                                        {{ $menu->price }} DH
+                                                                        {{ $menu->price }} IDR
                                                                     </span>
                                                                 @endforeach
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-danger">
-                                                                        Sérveur : {{ $sale->servant->name }}
+                                                                        Pelayan : {{ $sale->servant->name }}
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Qté : {{ $sale->quantity }}
+                                                                        Jumlah Bayar : {{ $sale->quantity }}
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Prix : {{ $sale->total_price }} DH
+                                                                        Harga : {{ $sale->total_price }} IDR
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Total : {{ $sale->total_received }} DH
+                                                                        Total : {{ $sale->total_received }} IDR
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Reste : {{ $sale->change }} DH
+                                                                        Sisa : {{ $sale->change }} IDR
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Type de paiement :
+                                                                        Tipe Pembayaran :
                                                                         {{ $sale->payment_type === "cash" ?
-                                                                             "Espéce" : "Carte bancaire" }}
+                                                                             "Cash" : "Kartu Debit" }}
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="badge badge-light">
-                                                                        Etat de paiement :
+                                                                        Status Pembayaran :
                                                                         {{ $sale->payment_status === "paid" ?
-                                                                             "Payé" : "Impayé" }}
+                                                                             "Dibayar" : "Belum Dibayar" }}
                                                                     </span>
                                                                 </h5>
                                                                 <hr>
@@ -118,13 +118,28 @@
                                                                     flex-column justify-content-center
                                                                     align-items-center">
                                                                     <span class="font-weight-bold">
-                                                                        Restaurant XXXXX
+                                                                    Restaurant Burger Shevira
                                                                     </span>
                                                                     <span>
-                                                                        Rue afrah taza
+                                                                        Jl. Kemuning Raya 77
                                                                     </span>
                                                                     <span>
-                                                                        0123456789
+                                                                        Semarang
+                                                                    </span>
+                                                                    <span>
+                                                                        (024) 71795501
+                                                                    </span>
+                                                                    <span>
+                                                                        081772519818
+                                                                    </span>
+                                                                    <span>
+                                                                        Resto dengan Burger
+                                                                    </span>
+                                                                    <span>
+                                                                        Andalan Orang Indonesia
+                                                                    </span>
+                                                                    <span>
+                                                                        RBS Namanya
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -199,7 +214,7 @@
                                                         {{ $menu->title }}
                                                     </h5>
                                                     <h5 class="text-muted">
-                                                        {{ $menu->price }} DH
+                                                        {{ $menu->price }} IDR
                                                     </h5>
                                                 </div>
                                             </div>
@@ -214,7 +229,7 @@
                             <div class="form-group">
                                 <select name="servant_id" class="form-control">
                                     <option value="" selected disabled>
-                                        Sérveur
+                                        Pelayan
                                     </option>
                                     @foreach ($servants as $servant)
                                         <option value="{{ $servant->id }}">
@@ -226,13 +241,13 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
-                                        Qté
+                                        Jumlah Menu
                                     </div>
                                 </div>
                                 <input type="number"
                                     name="quantity"
                                     class="form-control"
-                                    placeholder="Qté"
+                                    placeholder="Jumlah Menu"
                                 >
                             </div>
                             <div class="input-group mb-3">
@@ -244,11 +259,11 @@
                                 <input type="number"
                                     name="total_price"
                                     class="form-control"
-                                    placeholder="Prix"
+                                    placeholder="Uang Pembeli "
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
@@ -261,11 +276,11 @@
                                 <input type="number"
                                     name="total_received"
                                     class="form-control"
-                                    placeholder="Total"
+                                    placeholder="Total Harga"
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
@@ -278,37 +293,37 @@
                                 <input type="number"
                                     name="change"
                                     class="form-control"
-                                    placeholder="Reste"
+                                    placeholder="Sisa Kembalian"
                                 >
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        .00
+                                        .000
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <select name="payment_type" class="form-control">
                                     <option value="" selected disabled>
-                                        Type de paiement
+                                        Jenis Pembayaran
                                     </option>
                                     <option value="cash">
-                                        Espéce
+                                        Tunai
                                     </option>
                                     <option value="card">
-                                        Carte bancaire
+                                        kartu Debit
                                     </option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select name="payment_status" class="form-control">
                                     <option value="" selected disabled>
-                                        Etat de paiement
+                                        Status Pembayaran
                                     </option>
                                     <option value="paid">
-                                        Payé
+                                        Sudah Dibayar
                                     </option>
                                     <option value="unpaid">
-                                        Impayé
+                                        Belum Dibayar
                                     </option>
                                 </select>
                             </div>
@@ -319,7 +334,7 @@
                                     "
                                     class="btn btn-primary"
                                 >
-                                    Valider
+                                    Submit
                                 </button>
                             </div>
                         </div>

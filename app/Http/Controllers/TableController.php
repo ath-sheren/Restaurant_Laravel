@@ -60,7 +60,7 @@ class TableController extends Controller
         ]);
         //redirect user
         return redirect()->route("tables.index")->with([
-            "success" => "table ajoutée avec succés"
+            "success" => "Meja Berhasil Ditambahkan"
         ]);
     }
 
@@ -113,7 +113,7 @@ class TableController extends Controller
         ]);
         //redirect user
         return redirect()->route("tables.index")->with([
-            "success" => "table modifiée avec succés"
+            "success" => "Meja Berhasil Diupdate"
         ]);
     }
 
@@ -129,7 +129,7 @@ class TableController extends Controller
         $table->delete();
         //redirect user
         return redirect()->route("tables.index")->with([
-            "success" => "table supprimée avec succés"
+            "success" => "Meja Berhasil Dihapus"
         ]);
     }
 }

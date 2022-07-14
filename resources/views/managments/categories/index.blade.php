@@ -14,7 +14,7 @@
                             <div class="col-md-8">
                                 <div class="d-flex flex-row justify-content-between align-items-center border-bottom pb-1">
                                     <h3 class="text-secondary">
-                                        <i class="fas fa-th-list"></i> Catégories
+                                        <i class="fas fa-th-list"></i> Kategori
                                     </h3>
                                     <a href="{{ route("categories.create") }}" class="btn btn-primary">
                                         <i class="fas fa-plus fa-x2"></i>
@@ -24,8 +24,8 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Titre</th>
-                                            <th>Action</th>
+                                            <th>Nama</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,7 +47,7 @@
                                                         <button
                                                             onclick="
                                                                 event.preventDefault();
-                                                                if(confirm('Voulez vous supprimer la catégorie {{ $category->title }} ?'))
+                                                                if(confirm('Apakah Anda ingin menghapus kategori? {{ $category->title }} ?'))
                                                                 document.getElementById({{ $category->id }}).submit()
                                                             "
                                                             class="btn btn-danger">

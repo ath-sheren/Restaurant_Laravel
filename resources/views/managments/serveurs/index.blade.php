@@ -14,7 +14,7 @@
                             <div class="col-md-8">
                                 <div class="d-flex flex-row justify-content-between align-items-center border-bottom pb-1">
                                     <h3 class="text-secondary">
-                                        <i class="fas fa-user-cog"></i> Sérveurs
+                                        <i class="fas fa-user-cog"></i> Pelayan
                                     </h3>
                                     <a href="{{ route("servants.create") }}" class="btn btn-primary">
                                         <i class="fas fa-plus fa-x2"></i>
@@ -24,9 +24,9 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Nom & Prénom</th>
-                                            <th>Addresse</th>
-                                            <th>Action</th>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -57,7 +57,7 @@
                                                         <button
                                                             onclick="
                                                                 event.preventDefault();
-                                                                if(confirm('Voulez vous supprimer le sérveur {{ $servant->name }} ?'))
+                                                                if(confirm('Apakah Anda ingin menghapus pelayan?{{ $servant->name }} ?'))
                                                                 document.getElementById({{ $servant->id }}).submit()
                                                             "
                                                             class="btn btn-danger">

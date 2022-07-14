@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-md-8">
                                 <h3 class="text-secondary border-bottom mb-3 p-2">
-                                    <i class="fas fa-plus"></i> Ajouter un sérveur
+                                    <i class="fas fa-plus"></i> Tambah Pelayan
                                 </h3>
                                 <form action="{{ route("servants.store") }}" method="post">
                                     @csrf
@@ -21,19 +21,19 @@
                                         <input
                                             type="text" name="name" id="name"
                                             class="form-control"
-                                            placeholder="Nom & Prénom"
+                                            placeholder="Nama"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <input
                                             type="text" name="address" id="address"
                                             class="form-control"
-                                            placeholder="Addresse"
+                                            placeholder="Alamat"
                                         >
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">
-                                            Valider
+                                            Submit
                                         </button>
                                     </div>
                                 </form>

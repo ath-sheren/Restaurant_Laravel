@@ -11,7 +11,7 @@
                             <div class="col-md-12">
                                 <div class="d-flex flex-row justify-content-between align-items-center border-bottom pb-1">
                                     <h3 class="text-secondary">
-                                        <i class="fas fa-credit-card"></i> Ventes
+                                        <i class="fas fa-credit-card"></i> Penjualan
                                     </h3>
                                     <a href="{{ route("payments.index") }}" class="btn btn-primary">
                                         <i class="fas fa-plus fa-x2"></i>
@@ -21,14 +21,13 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Menus</th>
-                                            <th>Tables</th>
-                                            <th>Sérveur</th>
-                                            <th>Quantité</th>
-                                            <th>Total</th>
-                                            <th>Type de paiement</th>
-                                            <th>Etat de paiement</th>
-                                            <th>Action</th>
+                                            <th>Menu</th>
+                                            <th>Meja</th>
+                                            <th>Pelayan</th>
+                                            <th>Jumlah Menu</th>
+                                            <th>Total Harga</th>
+                                            <th>Jenis Pembayaran</th>
+                                            <th>Status Pembayaran</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,7 +53,7 @@
                                                                         {{ $menu->title }}
                                                                     </h5>
                                                                     <h5 class="text-muted">
-                                                                        {{ $menu->price }} DH
+                                                                        {{ $menu->price }} IDR
                                                                     </h5>
                                                                 </div>
                                                             </div>
@@ -87,10 +86,10 @@
                                                     {{ $sale->total_received}}
                                                 </td>
                                                 <td>
-                                                    {{ $sale->payment_type === "cash" ? "Espéce" : "Carte bancaire"}}
+                                                    {{ $sale->payment_type === "cash" ? "Tunai" : "Kartu Debit"}}
                                                 </td>
                                                 <td>
-                                                    {{ $sale->payment_status === "paid" ? "Payé" : "Impayé"}}
+                                                    {{ $sale->payment_status === "paid" ? "Dibayar" : "Belum Dibayar"}}
                                                 </td>
                                                 <td class="d-flex flex-row justify-content-center align-items-center">
                                                     <a href="{{ route("sales.edit",$sale->id) }}" class="btn btn-warning mr-1">
@@ -102,7 +101,7 @@
                                                         <button
                                                             onclick="
                                                                 event.preventDefault();
-                                                                if(confirm('Voulez vous supprimer la vente {{ $sale->id }} ?'))
+                                                                if(confirm('Apakah Anda ingin menghapus penjualan? {{ $sale->id }} ?'))
                                                                 document.getElementById({{ $sale->id }}).submit()
                                                             "
                                                             class="btn btn-danger">

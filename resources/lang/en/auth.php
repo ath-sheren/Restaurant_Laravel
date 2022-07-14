@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Email ou mot de passe est incorrect.',
-    'throttle' => 'Veuillez réessayer aprés :seconds secondes.',
+    'failed' => 'Email yang anda masukkan salah.',
+    'throttle' => 'Silakan coba lagi nanti :seconds secondes.',
 
 ];

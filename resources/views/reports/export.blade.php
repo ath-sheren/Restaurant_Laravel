@@ -2,13 +2,13 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Menus</th>
-            <th>Tables</th>
-            <th>Sérveur</th>
-            <th>Quantité</th>
-            <th>Total</th>
-            <th>Type de paiement</th>
-            <th>Etat de paiement</th>
+            <th>Menu</th>
+            <th>Meja</th>
+            <th>Pelayan</th>
+            <th>Jumlah Menu</th>
+            <th>Total Bayar</th>
+            <th>Jenis Pembayaran</th>
+            <th>Status Pembayaran</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
                             {{ $menu->title }}
                         </h5>
                         <h5>
-                            {{ $menu->price }} DH
+                            {{ $menu->price }} IDR
                         </h5>
                     @endforeach
                 </td>
@@ -44,19 +44,19 @@
                     {{ $sale->total_received}}
                 </td>
                 <td>
-                    {{ $sale->payment_type === "cash" ? "Espéce" : "Carte bancaire"}}
+                    {{ $sale->payment_type === "cash" ? "Cash" : "Kartu Debit"}}
                 </td>
                 <td>
-                    {{ $sale->payment_status === "paid" ? "Payé" : "Impayé"}}
+                    {{ $sale->payment_status === "paid" ? "Dibayar" : "Belum Dibayar"}}
                 </td>
             </tr>
         @endforeach
         <tr>
             <td colspan="5">
-                Rapport de {{ $from }} à {{ $to }}
+                Laporan dari {{ $from }} sampai {{ $to }}
             </td>
             <td>
-                {{ $total }} dh
+                {{ $total }} IDR
             </td>
         </tr>
     </tbody>

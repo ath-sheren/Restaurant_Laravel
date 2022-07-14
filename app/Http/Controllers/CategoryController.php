@@ -57,7 +57,7 @@ class CategoryController extends Controller
         ]);
         //redirect user
         return redirect()->route("categories.index")->with([
-            "success" => "catégorie ajoutée avec succés"
+            "success" => "kategori berhasil ditambahkan"
         ]);
     }
 
@@ -107,7 +107,7 @@ class CategoryController extends Controller
         ]);
         //redirect user
         return redirect()->route("categories.index")->with([
-            "success" => "catégorie modifiée avec succés"
+            "success" => "kategori berhasil diubah"
         ]);
     }
 
@@ -123,7 +123,7 @@ class CategoryController extends Controller
         $category->delete();
         //redirect user
         return redirect()->route("categories.index")->with([
-            "success" => "catégorie supprimée avec succés"
+            "success" => "kategori berhasil dihapus"
         ]);
     }
 }

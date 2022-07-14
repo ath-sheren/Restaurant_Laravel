@@ -10,19 +10,19 @@
                         <div class="col-sm-4 d-flex flex-column align-items-center justify-content-center">
                             <i class="fa fa-cog fa-5x text-danger"></i>
                             <a href="/categories" class="font-weight-bold btn btn-link">
-                                Gérer
+                                Kelola
                             </a>
                         </div>
                         <div class="col-sm-4 d-flex flex-column align-items-center justify-content-center">
                             <i class="fa fa-shopping-bag fa-5x text-primary"></i>
                             <a href="/payments" class="font-weight-bold btn btn-link">
-                                Ventes
+                                Penjualan
                             </a>
                         </div>
                         <div class="col-sm-4 d-flex flex-column align-items-center justify-content-center">
                             <i class="fa fa-clipboard-list fa-5x text-success"></i>
                             <a href="/reports" class="font-weight-bold btn btn-link">
-                                Rapports
+                                Laporan
                             </a>
                         </div>
                     </div>

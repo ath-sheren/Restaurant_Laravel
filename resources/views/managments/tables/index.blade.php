@@ -14,7 +14,7 @@
                             <div class="col-md-8">
                                 <div class="d-flex flex-row justify-content-between align-items-center border-bottom pb-1">
                                     <h3 class="text-secondary">
-                                        <i class="fas fa-chair"></i> Tables
+                                        <i class="fas fa-chair"></i> Meja
                                     </h3>
                                     <a href="{{ route("tables.create") }}" class="btn btn-primary">
                                         <i class="fas fa-plus fa-x2"></i>
@@ -24,9 +24,9 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Nom</th>
-                                            <th>Disponible</th>
-                                            <th>Action</th>
+                                            <th>Nama Pemesan</th>
+                                            <th>Tersedia</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -41,11 +41,11 @@
                                                 <td>
                                                     @if ($table->status)
                                                         <span class="badge badge-success">
-                                                            Oui
+                                                            Ya
                                                         </span>
                                                     @else
                                                         <span class="badge badge-danger">
-                                                            Non
+                                                            Tidak
                                                         </span>
                                                     @endif
                                                 </td>
@@ -59,7 +59,7 @@
                                                         <button
                                                             onclick="
                                                                 event.preventDefault();
-                                                                if(confirm('Voulez vous supprimer la table {{ $table->name }} ?'))
+                                                                if(confirm('Apakah Anda ingin menghapus meja? {{ $table->name }} ?'))
                                                                 document.getElementById({{ $table->id }}).submit()
                                                             "
                                                             class="btn btn-danger">

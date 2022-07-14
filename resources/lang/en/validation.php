@@ -131,63 +131,63 @@ return [
 
     'custom' => [
         'title' => [
-            'required' => 'Le champ titre est obligatoire',
-            'unique' => 'Le titre existe déjà',
+            'required' => 'Nama Wajib',
+            'unique' => 'Nama Judul Sudah ada',
         ],
         'description' => [
-            'required' => 'Le champ description est obligatoire',
+            'required' => 'Kolom Deskripsi wajib diisi',
         ],
         'price' => [
-            'required' => 'Le champ prix est obligatoire',
+            'required' => 'Kolom Harga wajib diisi',
         ],
         'image' => [
-            'required' => 'Le champ image est obligatoire',
-            'image' => 'Veuillez choisir une image valide',
-            'mimes' => 'Seuls les fichiers : :values sont accéptés',
-            'uploaded' => 'la taille du fichier :attribute ne doit pas dépasser 2mg',
+            'required' => 'Kolom Gambar Wajib Diisi',
+            'image' => 'Pilih Gambar yang Valid',
+            'mimes' => 'Hanya File Yang Diterima',
+            'uploaded' => 'Ukuran File Tidak Boleh Lebih Dari 2MB',
         ],
         'category_id' => [
-            'required' => 'Le champ catégorie est obligatoire',
+            'required' => 'Kolom Kategori Wajib Diisi',
         ],
         'name' => [
-            'required' => 'Le champ nom est obligatoire',
-            'unique' => 'Le nom existe déjà',
+            'required' => 'Kolom Nama Wajib Diisi',
+            'unique' => 'Nama Sudah Ada',
         ],
         'status' => [
-            'required' => 'Le champ disponibilité est obligatoire',
+            'required' => 'Kolom Ketersediaan Wajib Diisi',
         ],
         'quantity' => [
-            'required' => 'Le champ quantité est obligatoire',
+            'required' => 'Kolom Jumlah Menu Wajib Diisi',
         ],
         'total_price' => [
-            'required' => 'Le champ prix TTC est obligatoire',
+            'required' => 'Kolom Uang Pelanggan Wajib Diisi',
         ],
         'total_received' => [
-            'required' => 'Le champ total est obligatoire',
+            'required' => 'Kolom Total Harga Wajib Diisi',
         ],
         'payment_status' => [
-            'required' => 'Le champ statut de paiement est obligatoire',
+            'required' => 'Kolom Status Pembayaran Wajib Diisi',
         ],
         'payment_type' => [
-            'required' => 'Le champ type de paiement est obligatoire',
+            'required' => 'Kolom Jenis Pembayaran Wajib Diisi',
         ],
         'menu_id' => [
-            'required' => 'Le champ menu est obligatoire',
+            'required' => 'Kolom Menu Wajib Diisi',
         ],
         'table_id' => [
-            'required' => 'Le champ table est obligatoire',
+            'required' => 'Kolom Meja Wajib Diisi',
         ],
         'servant_id' => [
-            'required' => 'Le champ sérveur est obligatoire',
+            'required' => 'Kolom Pelayan Wajib Diisi',
         ],
         'change' => [
-            'required' => 'Le champ reste est obligatoire',
+            'required' => 'Kolom Sisa Wajib Diisi',
         ],
         'from' => [
-            'required' => 'Le champ date de début est obligatoire',
+            'required' => 'Kolom Tanggal Awal Wajib Diisi',
         ],
         'to' => [
-            'required' => 'Le champ date de fin est obligatoire',
+            'required' => 'Kolom Tanggal Akhir Wajib Diisi',
         ],
     ],
 

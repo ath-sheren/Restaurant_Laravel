@@ -24,12 +24,12 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Titre</th>
-                                            <th>Description</th>
-                                            <th>Prix</th>
-                                            <th>Catégorie</th>
-                                            <th>Image</th>
-                                            <th>Action</th>
+                                            <th>nama</th>
+                                            <th>Deskripsi</th>
+                                            <th>Harga</th>
+                                            <th>Kategori</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -45,7 +45,7 @@
                                                     {{ substr($menu->description,0,100)}}
                                                 </td>
                                                 <td>
-                                                    {{ $menu->price}} DH
+                                                    {{ $menu->price}} 
                                                 </td>
                                                 <td>
                                                     {{ $menu->category->title}}
@@ -65,7 +65,7 @@
                                                         <button
                                                             onclick="
                                                                 event.preventDefault();
-                                                                if(confirm('Voulez vous supprimer le menu {{ $menu->title }} ?'))
+                                                                if(confirm('Yakin menghapus menu? {{ $menu->title }} ?'))
                                                                 document.getElementById({{ $menu->id }}).submit()
                                                             "
                                                             class="btn btn-danger">

@@ -73,7 +73,7 @@ class MenuController extends Controller
             ]);
             //redirect user
             return redirect()->route("menus.index")->with([
-                "success" => "menu ajouté avec succés"
+                "success" => "menu berhasil ditambahkan"
             ]);
         }
     }
@@ -139,7 +139,7 @@ class MenuController extends Controller
             ]);
             //redirect user
             return redirect()->route("menus.index")->with([
-                "success" => "menu modifié avec succés"
+                "success" => "menu berhasil dimodifikasi"
             ]);
         } else {
             $title = $request->title;
@@ -152,7 +152,7 @@ class MenuController extends Controller
             ]);
             //redirect user
             return redirect()->route("menus.index")->with([
-                "success" => "menu modifié avec succés"
+                "success" => "menu berhasil dimodifikasi"
             ]);
         }
     }
@@ -170,7 +170,7 @@ class MenuController extends Controller
         $menu->delete();
         //redirect user
         return redirect()->route("menus.index")->with([
-            "success" => "menu supprimé avec succés"
+            "success" => "menu berhasil dihapus"
         ]);
     }
 }
